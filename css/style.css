@@ -78,6 +78,7 @@ body {
 }
 .container .topCard .switchInput .darkMode {
   margin-right: 2rem;
+  color: var(--textBlue);
 }
 .container .topCard .switch {
   position: relative;
@@ -109,7 +110,7 @@ body {
   left: 35px;
   bottom: 4px;
   border-radius: 50%;
-  background-color: white;
+  background-color: var(--background);
   transition: 0.4s;
 }
 .container input:checked + .slider {

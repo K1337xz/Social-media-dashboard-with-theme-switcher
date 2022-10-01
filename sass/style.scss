@@ -50,6 +50,7 @@ body {
 			@include flex-column-row();
 			.darkMode {
 				margin-right: 2rem;
+				color: var(--textBlue);
 			}
 		}
 		.switch {
@@ -81,7 +82,7 @@ body {
 				left: 35px;
 				bottom: 4px;
 				border-radius: 50%;
-				background-color: white;
+				background-color: var(--background);
 				-webkit-transition: 0.4s;
 				transition: 0.4s;
 			}
