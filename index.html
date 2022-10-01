@@ -1,87 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html lang="en" data-theme="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Frontend Mentor | [Challenge Name Here]</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Social Media Dashboard
-  Total Followers: 23,004
-
-  Dark Mode
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<main class="container">
+			<div class="topCard">
+				<h1>Social Media Dashboard</h1>
+				<sub>Total Followers: 23,004</sub>
+				<label for="switch">
+					Dark Mode
+					<input type="checkbox" class="switchInput" />
+					<span class="slider round"></span>
+				</label>
+			</div>
+			<div class="maincards">
+				<div class="topCards">
+					<div class="facebook card">
+						<div class="fbcontent">
+							<span class="fbIcon"></span><sub>@nathanf</sub>
+							<h2>1987</h2>
+							<p>Followers</p>
+							<p><span class="arrowUp"></span>12 Today</p>
+						</div>
+					</div>
+					<div class="twitter card">
+						<div class="twittercontent">
+							<span class="twittIcon"></span><sub>@nathanf</sub>
+							<h2>1044</h2>
+							<p>Followers</p>
+							<p><span class="arrowUp"></span>99 Today</p>
+						</div>
+					</div>
+					<div class="instagram card">
+						<div class="igcontent">
+							<span class="igIcon"></span><sub>@realnathanf</sub>
+							<h2>11k</h2>
+							<p>Followers</p>
+							<p><span class="arrowUp"></span>1099 Today</p>
+						</div>
+					</div>
+					<div class="youtube card">
+						<div class="ytcontent">
+							<span class="ytIcon"></span><sub>Nathan F.</sub>
+							<h2>8239</h2>
+							<p>Followers</p>
+							<p><span class="arrowDown"></span>114 Today</p>
+						</div>
+					</div>
+				</div>
+				<div class="bottomCards">
+					<h3>Overview Today</h3>
+					<div class="overviewcards">
+						<div class="fbviews">
+							<p>Page Views <span class="fbIcon"></span></p>
+							<p>87 <span class="arrowUp">3%</span></p>
+						</div>
+						<div class="fblikes">
+							<p>Likes <span class="fbIcon"></span></p>
+							<p>52 <span class="arrowDown">2%</span></p>
+						</div>
+						<div class="iglikes">
+							<p>Likes <span class="igIcon"></span></p>
+							<p>5246 <span class="arrowUp">2257%</span></p>
+						</div>
+						<div class="igviews">
+							<p>Profile Views <span class="igIcon"></span></p>
+							<p>52k <span class="arrowUp">1375%</span></p>
+						</div>
+						<div class="retweets">
+							<p>Retweets <span class="twittIcon"></span></p>
+							<p>117 <span class="arrowUp">303%</span></p>
+						</div>
+						<div class="twittLikes">
+							<p>Likes <span class="twittIcon"></span></p>
+							<p>507 <span class="arrowUp">553%</span></p>
+						</div>
+						<div class="ytLikes">
+							<p>Likes <span class="ytIcon"></span></p>
+							<p>107 <span class="arrowDown">19%</span></p>
+						</div>
+						<div class="totalviewsYt">
+							<p>Total Views <span class="ytIcon"></span></p>
+							<p>1407 <span class="arrowDown">12%</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="attribution">
+				Challenge by
+				<a
+					href="https://www.frontendmentor.io?ref=challenge"
+					target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="#">Your Name Here</a>.
+			</div>
+		</footer>
+	</body>
 </html>
