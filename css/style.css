@@ -1,9 +1,123 @@
 :root[data-theme=light] {
-  --LimGreen: hsl(163, 72%, 41%);
+  --limegreen: hsl(163, 72%, 41%);
+  --brightred: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --youtube: hsl(348, 97%, 39%);
+  --toggle: hsl(230, 22%, 74%);
+  --background: hsl(0, 0%, 100%);
+  --topbackground: hsl(225, 100%, 98%);
+  --cardbackground: hsl(227, 47%, 96%);
+  --textBlue: hsl(228, 12%, 44%);
+  --text: hsl(230, 17%, 14%);
+}
+
+:root[data-theme=dark] {
+  --limegreen: hsl(163, 72%, 41%);
+  --brightred: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --youtube: hsl(348, 97%, 39%);
+  --toggle: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --background: hsl(230, 17%, 14%);
+  --topbackground: hsl(232, 19%, 15%);
+  --cardbackground: hsl(228, 28%, 20%);
+  --textBlue: hsl(228, 34%, 66%);
+  --text: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-  background-color: var(--LimGreen);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--background);
+  height: 100vh;
   width: 100%;
-  font-size: 100rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.container .topCard {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: var(--topbackground);
+  width: 100%;
+  height: 40vh;
+  border-bottom-left-radius: 50px;
+}
+.container .topCard h1 {
+  color: var(--text);
+  font-weight: 700;
+}
+.container .topCard h1 p {
+  color: var(--textBlue);
+  font-weight: 400;
+  font-size: 16px;
+}
+.container .topCard .switchInput {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.container .topCard .switchInput .darkMode {
+  margin-right: 2rem;
+}
+.container .topCard .switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 34px;
+}
+.container .topCard .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.container .topCard .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--toggle);
+  border-radius: 34px;
+  transition: 0.4s;
+}
+.container .topCard .slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 35px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.4s;
+}
+.container input:checked + .slider {
+  background-image: var(--toggle);
+}
+.container input:focus + .slider {
+  box-shadow: 0 0 1px var(--toggle);
+}
+.container input:checked + .slider::before {
+  transform: translateX(-27px);
 }/*# sourceMappingURL=style.css.map */
