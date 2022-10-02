@@ -3,7 +3,7 @@
   --brightred: hsl(356, 69%, 56%);
   --facebook: hsl(208, 92%, 53%);
   --twitter: hsl(203, 89%, 53%);
-  --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
   --youtube: hsl(348, 97%, 39%);
   --toggle: hsl(230, 22%, 74%);
   --background: hsl(0, 0%, 100%);
@@ -18,7 +18,7 @@
   --brightred: hsl(356, 69%, 56%);
   --facebook: hsl(208, 92%, 53%);
   --twitter: hsl(203, 89%, 53%);
-  --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
   --youtube: hsl(348, 97%, 39%);
   --toggle: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
   --background: hsl(230, 17%, 14%);
@@ -50,7 +50,7 @@ body {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 95%;
 }
 .container .topCard {
   display: flex;
@@ -113,6 +113,10 @@ body {
   background-color: var(--background);
   transition: 0.4s;
 }
+.container .topCard .topcardText sub {
+  color: var(--textBlue);
+  font-weight: 700;
+}
 .container input:checked + .slider {
   background-image: var(--toggle);
 }
@@ -121,4 +125,262 @@ body {
 }
 .container input:checked + .slider::before {
   transform: translateX(-27px);
+}
+
+.maincards {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.maincards .socialCards {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: -4rem;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.maincards .socialCards .facebook {
+  border-top: 5px solid var(--facebook);
+}
+.maincards .socialCards .facebook .fbcontent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.maincards .socialCards .facebook .fbcontent .fbIcon {
+  background-image: url("../images/icon-facebook.svg");
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-left: -5rem;
+}
+.maincards .socialCards .facebook .fbcontent .fbIcon sub {
+  color: var(--textBlue);
+  font-weight: 700;
+  margin-left: 2rem;
+}
+.maincards .twitter {
+  border-top: 5px solid var(--twitter);
+}
+.maincards .twitter .twittercontent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.maincards .twitter .twittercontent .twittIcon {
+  background-image: url("../images/icon-twitter.svg");
+  display: flex;
+  width: 20px;
+  height: 17px;
+  margin-left: -5rem;
+}
+.maincards .twitter .twittercontent .twittIcon sub {
+  color: var(--textBlue);
+  font-weight: 700;
+  margin-left: 2rem;
+}
+.maincards .instagram .border {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  bottom: 1px;
+  background-image: var(--instagram);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.maincards .instagram .igcontent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.maincards .instagram .igcontent .igIcon {
+  background-image: url("../images/icon-instagram.svg");
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-left: -5rem;
+}
+.maincards .instagram .igcontent .igIcon sub {
+  color: var(--textBlue);
+  font-weight: 700;
+  margin-left: 2rem;
+}
+.maincards .youtube {
+  border-top: 5px solid var(--youtube);
+}
+.maincards .youtube .ytcontent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.maincards .youtube .ytcontent .ytIcon {
+  background-image: url("../images/icon-youtube.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  height: 20px;
+  margin-left: 0rem;
+}
+.maincards .youtube .ytcontent .ytIcon sub {
+  color: var(--textBlue);
+  font-weight: 700;
+  margin-left: 2rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 30vh;
+  height: 30vh;
+  background-color: var(--cardbackground);
+  border-radius: 10px;
+}
+.card .followNum h2 {
+  color: var(--text);
+  font-size: 60px;
+  margin-left: 1rem;
+  text-align: center;
+}
+.card .followNum p {
+  margin-left: 1rem;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  color: var(--textBlue);
+}
+.card .arrow {
+  color: var(--limegreen);
+  font-weight: 700;
+}
+.card .arrow .arrowUp {
+  display: inline-block;
+  background-image: url(../images/icon-up.svg);
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 8px;
+}
+.card .arrowD {
+  color: var(--brightred);
+  font-weight: 700;
+}
+.card .arrowD .arrowDown {
+  display: inline-block;
+  background-image: url(../images/icon-down.svg);
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 8px;
+}
+
+.bottomCards {
+  margin-top: 4rem;
+  color: var(--text);
+}
+.bottomCards .overviewcards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 19px;
+  grid-row-gap: 22px;
+}
+.bottomCards .overviewcards .cardbottom {
+  width: 36vh;
+  height: 15vh;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--cardbackground);
+}
+.bottomCards .overviewcards .fbIcon {
+  background-image: url("../images/icon-facebook.svg");
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-left: -5rem;
+}
+.bottomCards .overviewcards .igIcon {
+  background-image: url("../images/icon-instagram.svg");
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-left: -5rem;
+}
+.bottomCards .overviewcards .twittIcon {
+  background-image: url("../images/icon-twitter.svg");
+  display: flex;
+  width: 20px;
+  height: 16px;
+  margin-left: -5rem;
+}
+.bottomCards .overviewcards .ytIcon {
+  background-image: url("../images/icon-youtube.svg");
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-left: -5rem;
+}
+.bottomCards .overviewcards .topicons {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.bottomCards .overviewcards .topicons p {
+  color: var(--textBlue);
+  font-weight: 700;
+}
+.bottomCards .bottomnums {
+  color: var(--text);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.bottomCards .bottomnums p {
+  font-size: 25px;
+}
+.bottomCards .bottomnums .arrowUp {
+  background-image: url("../images/icon-up.svg");
+  background-repeat: no-repeat;
+  background-position: 19px 7px;
+  color: var(--limegreen);
+  font-weight: 400;
+  padding-left: 2rem;
+  font-size: 10px;
+}
+.bottomCards .bottomnums .arrowDown {
+  background-image: url("../images/icon-down.svg");
+  background-repeat: no-repeat;
+  background-position: 19px 7px;
+  color: var(--brightred);
+  font-weight: 400;
+  padding-left: 2rem;
+  font-size: 10px;
+}
+
+footer .attribution {
+  font-weight: 700;
+  color: var(--text);
+}
+footer .attribution a {
+  color: var(--youtube);
 }/*# sourceMappingURL=style.css.map */
