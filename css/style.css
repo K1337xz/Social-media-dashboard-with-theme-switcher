@@ -40,7 +40,7 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: var(--background);
-  height: 100vh;
+  width: 100%;
   width: 100%;
 }
 
@@ -383,4 +383,50 @@ footer .attribution {
 }
 footer .attribution a {
   color: var(--youtube);
+}
+
+@media screen and (max-width: 700px) {
+  .container .topCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 45%;
+    height: 40vh;
+  }
+  .container .topCard .topcardText {
+    height: 30%;
+    border-bottom: 2px solid var(--textBlue);
+  }
+  .container .topCard h1 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .container .topCard .switchInput {
+    width: 100%;
+    justify-content: space-around;
+    height: 40%;
+  }
+  .maincards {
+    width: 70%;
+    height: 55%;
+  }
+  .maincards .socialCards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -3rem;
+    width: 100%;
+    gap: 30px;
+  }
+  .bottomCards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .bottomCards .overviewcards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */

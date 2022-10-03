@@ -20,7 +20,7 @@
 body {
 	@include flex-column-center();
 	background-color: var(--background);
-	height: 100vh;
+	width: 100%;
 	width: 100%;
 }
 .container {
@@ -346,6 +346,43 @@ footer {
 		color: var(--text);
 		a {
 			color: var(--youtube);
+		}
+	}
+}
+@media screen and (max-width: 700px) {
+	.container .topCard {
+		@include flex-column-center();
+		justify-content: space-evenly;
+		height: 45%;
+		height: 40vh;
+		.topcardText {
+			height: 30%;
+			border-bottom: 2px solid var(--textBlue);
+		}
+		h1 {
+			text-align: center;
+			font-size: 25px;
+		}
+		.switchInput {
+			width: 100%;
+			justify-content: space-around;
+			height: 40%;
+		}
+	}
+	.maincards {
+		width: 70%;
+		height: 55%;
+		.socialCards {
+			@include flex-column-center();
+			margin-top: -3rem;
+			width: 100%;
+			gap: 30px;
+		}
+	}
+	.bottomCards {
+		@include flex-column-center();
+		.overviewcards {
+			@include flex-column-center();
 		}
 	}
 }
