@@ -429,4 +429,10 @@ footer .attribution a {
     align-items: center;
     flex-direction: column;
   }
+  .card .followNum h2 {
+    font-size: 45px;
+  }
+  .card .followNum p {
+    letter-spacing: 5px;
+  }
 }/*# sourceMappingURL=style.css.map */

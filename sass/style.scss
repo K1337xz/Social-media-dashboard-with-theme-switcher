@@ -385,4 +385,14 @@ footer {
 			@include flex-column-center();
 		}
 	}
+	.card {
+		.followNum {
+			h2 {
+				font-size: 45px;
+			}
+			p {
+				letter-spacing: 5px;
+			}
+		}
+	}
 }
